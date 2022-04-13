@@ -1,0 +1,470 @@
+{
+    "intents": [
+        {
+            "tag": "back_workout_gym",
+            "patterns": [
+                "can you please advise a back workout on the gym",
+                "can you please advise a back workout that can be done on the gym",
+                "can you please advise a back workout on the gym for me",
+                "can you please advise a back workout that can be done on the gym for me",
+                "can you please advise a back workout on the gym for me please",
+                "can you please advise a back workout for the gym",
+                "can you please advise a back workout for the gym for me",
+                "please advise a back workout for the gym",
+                "do you have any back workout for the gym",
+                "advise me a back workout for the gym",
+                "back workout gym",
+                "advise back workout for gym",
+                "advise a back workout for the gym",
+                "backworkoutgym"
+            ],
+            "responses": [
+                "back_gym"
+            ]
+        },
+        {
+            "tag": "back_workout_calisthenics",
+            "patterns": [
+                "can you please advise a calisthenics back workout",
+                "can you please advise a back workout that can be done at home",
+                "can you please advise a back workout at home for me",
+                "can you please advise a back workout that can be done at home for me",
+                "can you please advise a back workout at home for me please",
+                "can you please advise a back workout at home",
+                "can you please advise a back workout for home for me",
+                "please advise a back workout at home",
+                "do you have any calisthenics back workout",
+                "advise me a calisthenics back workout",
+                "back workout calisthenics",
+                "advise calisthenics back workout",
+                "advise a calisthenics back workout",
+                "backworkoutcalisthenics"
+            ],
+            "responses": [
+                "back_calisthenics"
+            ]
+        },
+        {
+            "tag": "cardio_workout_gym",
+            "patterns": [
+                "can you please advise a cardio workout for the gym",
+                "can you please advise a cardio workout for the gym for me",
+                "please advise a cardio workout for the gym",
+                "do you have any cardio workout for the gym",
+                "advise me a gym cardio workout",
+                "advise me a cardio workout that can be done on the gym",
+                "cardio workout gym",
+                "advise cardio workout for gym",
+                "advise a cardio workout for the gym",
+                "cardioworkoutgym",
+                "advise a cardio workout for gym",
+                "advise a cardio workout for the gym for me",
+                "advise a cardio workout for the gym for me please",
+                "advise a gym cardio workout"
+            ],
+            "responses": [
+                "cardio_gym"
+            ]
+        },
+        {
+            "tag": "cardio_workout_calisthenics",
+            "patterns": [
+                "can you please advise a cardio workout at home",
+                "can you please advise a cardio workout at home for me",
+                "please advise a calisthenics cardio workout",
+                "do you have any cardio workout at home",
+                "do you have any calisthenics cardio workout",
+                "advise me a calisthenics cardio workout",
+                "advise me a calisthenics cardio workout",
+                "advise me a cardio workout that can be done at home",
+                "calisthenics cardio workout",
+                "advise cardio workout at home",
+                "advise a cardio workout for home",
+                "cardioworkoutcalisthenics",
+                "calisthenicscardioworkout",
+                "advise a cardio workout at home",
+                "advise a cardio workout ath home for me",
+                "advise a cardio workout at home for me please",
+                "advise a calisthenics cardio workout"
+            ],
+            "responses": [
+                "cardio_calisthenics"
+            ]
+        },
+        {
+            "tag": "chest_workout_gym",
+            "patterns": [
+                "can you please advise a chest workout for the gym",
+                "please advise a chest workout for the gym",
+                "do you have any chest workout for the gym",
+                "advise me a chest workout for the gym",
+                "chestworkoutgym",
+                "advise chest workout for gym",
+                "advise a chest workout for the gym"
+            ],
+            "responses": [
+                "chest_gym"
+            ]
+        },
+        {
+            "tag": "chest_workout_calisthenics",
+            "patterns": [
+                "can you please advise a calisthenics chest workout",
+                "please advise a calisthenics chest workout",
+                "do you have any chest workout for home",
+                "do you have any chest workout that can be done at home",
+                "do you have any calisthenics chest workout",
+                "advise me a calishtenics chest workout",
+                "chest workout calisthenics",
+                "chestworkoutcalisthenics",
+                "advise calisthenics chest workout",
+                "advise a calisthenics chest workout",
+                "advise chest workout at home",
+                "advise a chest workout for home"
+            ],
+            "responses": [
+                "chest_calisthenics"
+            ]
+        },
+        {
+            "tag": "lower_arms_workout_gym",
+            "patterns": [
+                "can you please advise a lower arms workout for the gym",
+                "please advise a lower arms workout for the gym",
+                "do you have any lower arms workout for the gym",
+                "advise me a lower arms workout for the gym",
+                "lower arms workout gym",
+                "lowerarmsworkoutgym",
+                "advise lower arms workout for gym",
+                "advise a lower arms workout for the gym",
+                "can you please advise a lower arm workout for the gym",
+                "please advise a lower arm workout for the gym",
+                "do you have any lower arm workout for the gym",
+                "advise me a lower arm workout for the gym",
+                "lower arm workout gym",
+                "lowerarmworkoutgym",
+                "advise lower arm workout for gym",
+                "advise a lower arm workout for the gym"
+            ],
+            "responses": [
+                "lower_arms_gym"
+            ]
+        },
+        {
+            "tag": "lower_arms_workout_calisthenics",
+            "patterns": [
+                "can you please advise a lower arms workout at home",
+                "please advise a lower arms workout at home",
+                "do you have any lower arms workout at home",
+                "advise me a lower arms workout at home",
+                "lower arms workout calisthenics",
+                "lowerarmsworkoutcalisthenics",
+                "advise me a calisthenics lower arms workout",
+                "calisthenics lower arms workout",
+                "advise calisthenics lower arms workout",
+                "advise a calisthenics lower arms workout",
+                "advise a lower arms workout for home",
+                "can you please advise a lower arm workout at home",
+                "please advise a lower arm workout at home",
+                "do you have any lower arm workout at home",
+                "advise me a lower arm workout at home",
+                "lower arm workout calisthenics",
+                "lowerarmworkoutcalisthenics",
+                "advise me a calisthenics lower arm workout",
+                "calisthenics lower arm workout",
+                "advise calisthenics lower arm workout",
+                "advise a calisthenics lower arm workout",
+                "advise a lower arm workout for home"
+            ],
+            "responses": [
+                "lower_arms_calisthenics"
+            ]
+        },
+        {
+            "tag": "lower_legs_workout_gym",
+            "patterns": [
+                "can you please advise a lower legs workout for the gym",
+                "please advise a lower legs workout for the gym",
+                "do you have any lower legs workout for the gym",
+                "advise me a lower legs workout for the gym",
+                "lower legs workout gym",
+                "lowerlegsworkoutgym",
+                "advise lower legs workout for gym",
+                "advise a lower legs workout for the gym",
+                "can you please advise a lower leg workout for the gym",
+                "please advise a lower leg workout for the gym",
+                "do you have any lower leg workout for the gym",
+                "advise me a lower leg workout for the gym",
+                "lower leg workout gym",
+                "lowerlegworkoutgym",
+                "advise lower leg workout for gym",
+                "advise a lower leg workout for the gym"
+            ],
+            "responses": [
+                "lower_legs_gym"
+            ]
+        },
+        {
+            "tag": "lower_legs_workout_calisthenics",
+            "patterns": [
+                "can you please advise a lower legs workout at home",
+                "please advise a lower legs workout at home",
+                "do you have any lower legs workout at home",
+                "advise me a lower legs workout at home",
+                "lower legs workout calisthenics",
+                "lowerlegsworkoutcalisthenics",
+                "advise me a calisthenics lower legs workout",
+                "calisthenics lower legs workout",
+                "advise calisthenics lower legs workout",
+                "advise a calisthenics lower legs workout",
+                "advise a lower legs workout for home",
+                "can you please advise a lower leg workout at home",
+                "please advise a lower leg workout at home",
+                "do you have any lower leg workout at home",
+                "advise me a lower leg workout at home",
+                "lower leg workout calisthenics",
+                "lowerlegworkoutcalisthenics",
+                "advise me a calisthenics lower leg workout",
+                "calisthenics lower leg workout",
+                "advise calisthenics lower leg workout",
+                "advise a calisthenics lower leg workout",
+                "advise a lower leg workout for home"
+            ],
+            "responses": [
+                "lower_legs_calisthenics"
+            ]
+        },
+        {
+            "tag": "neck_workout_gym",
+            "patterns": [
+                "can you please advise a neck workout for the gym",
+                "please advise a neck workout for the gym",
+                "do you have any neck workout for the gym",
+                "advise me a neck workout for the gym",
+                "neck workout gym",
+                "neckworkoutgym",
+                "advise neck workout for gym",
+                "advise a neck workout for the gym"
+            ],
+            "responses": [
+                "neck_gym"
+            ]
+        },
+        {
+            "tag": "neck_workout_calisthenics",
+            "patterns": [
+                "can you please advise a neck workout at home",
+                "please advise a neck workout at home",
+                "do you have any neck workout at home",
+                "advise me a neck workout at home",
+                "neck workout calisthenics",
+                "neckworkoutcalisthenics",
+                "advise me a calisthenics neck workout",
+                "calisthenics neck workout",
+                "advise calisthenics neck workout",
+                "advise a calisthenics neck workout",
+                "advise a neck workout for home"
+            ],
+            "responses": [
+                "neck_calisthenics"
+            ]
+        },
+        {
+            "tag": "shoulders_workout_gym",
+            "patterns": [
+                "can you please advise a shoulders workout for the gym",
+                "please advise a shoulders workout for the gym",
+                "do you have any shoulders workout for the gym",
+                "advise me a shoulders workout for the gym",
+                "shoulders workout gym",
+                "shouldersworkoutgym",
+                "advise shoulders workout for gym",
+                "advise a shoulders workout for the gym",
+                "can you please advise a shoulder workout for the gym",
+                "please advise a shoulder workout for the gym",
+                "do you have any shoulder workout for the gym",
+                "advise me a shoulder workout for the gym",
+                "shoulder workout gym",
+                "shoulderworkoutgym",
+                "advise shoulder workout for gym",
+                "advise a shoulder workout for the gym"
+            ],
+            "responses": [
+                "shoulders_gym"
+            ]
+        },
+        {
+            "tag": "shoulders_workout_calisthenics",
+            "patterns": [
+                "can you please advise a shoulders workout at home",
+                "please advise a shoulders workout at home",
+                "do you have any shoulders workout at home",
+                "advise me a shoulders workout at home",
+                "shoulders workout calisthenics",
+                "shouldersworkoutcalisthenics",
+                "advise me a calisthenics shoulders workout",
+                "calisthenics shoulders workout",
+                "advise calisthenics shoulders workout",
+                "advise a calisthenics shoulders workout",
+                "advise a shoulders workout for home",
+                "can you please advise a shoulder workout at home",
+                "please advise a shoulder workout at home",
+                "do you have any shoulder workout at home",
+                "advise me a shoulder workout at home",
+                "shoulder workout calisthenics",
+                "shoulderworkoutcalisthenics",
+                "advise me a calisthenics shoulder workout",
+                "calisthenics shoulder workout",
+                "advise calisthenics shoulder workout",
+                "advise a calisthenics shoulder workout",
+                "advise a shoulder workout for home"
+            ],
+            "responses": [
+                "shoulders_calisthenics"
+            ]
+        },
+        {
+            "tag": "upper_arms_workout_gym",
+            "patterns": [
+                "can you please advise an upper arms workout for the gym",
+                "please advise an upper arms workout for the gym",
+                "do you have any upper arms workout for the gym",
+                "advise me an upper arms workout for the gym",
+                "upper arms workout gym",
+                "upperarmsworkoutgym",
+                "advise upper arms workout for gym",
+                "advise an upper arms workout for the gym",
+                "can you please advise an upper arm workout for the gym",
+                "please advise an upper arm workout for the gym",
+                "do you have any upper arm workout for the gym",
+                "advise me an upper arm workout for the gym",
+                "upper arm workout gym",
+                "upperarmworkoutgym",
+                "advise upper arm workout for gym",
+                "advise an upper arm workout for the gym"
+            ],
+            "responses": [
+                "upper_arms_gym"
+            ]
+        },
+        {
+            "tag": "upper_arms_workout_calisthenics",
+            "patterns": [
+                "can you please advise an upper arms workout at home",
+                "please advise an upper arms workout at home",
+                "do you have any upper arms workout at home",
+                "advise me an upper arms workout at home",
+                "upper arms workout calisthenics",
+                "upperarmsworkoutcalisthenics",
+                "advise me a calisthenics upper arms workout",
+                "calisthenics upper arms workout",
+                "advise calisthenics upper arms workout",
+                "advise a calisthenics upper arms workout",
+                "advise an upper arms workout for home",
+                "can you please advise an upper arm workout at home",
+                "please advise an upper arm workout at home",
+                "do you have any upper arm workout at home",
+                "advise me an upper arm workout at home",
+                "upper arm workout calisthenics",
+                "upperarmworkoutcalisthenics",
+                "advise me a calisthenics upper arm workout",
+                "calisthenics upper arm workout",
+                "advise calisthenics upper arm workout",
+                "advise a calisthenics upper arm workout",
+                "advise an upper arm workout for home"
+            ],
+            "responses": [
+                "upper_arms_calisthenics"
+            ]
+        },
+        {
+            "tag": "upper_legs_workout_gym",
+            "patterns": [
+                "can you please advise an upper legs workout for the gym",
+                "please advise an upper legs workout for the gym",
+                "do you have any upper legs workout for the gym",
+                "advise me an upper legs workout for the gym",
+                "upper legs workout gym",
+                "upperlegsworkoutgym",
+                "advise upper legs workout for gym",
+                "advise an upper legs workout for the gym",
+                "can you please advise an upper leg workout for the gym",
+                "please advise an upper leg workout for the gym",
+                "do you have any upper leg workout for the gym",
+                "advise me an upper leg workout for the gym",
+                "upper leg workout gym",
+                "upperlegworkoutgym",
+                "advise upper leg workout for gym",
+                "advise an upper leg workout for the gym"
+            ],
+            "responses": [
+                "upper_legs_gym"
+            ]
+        },
+        {
+            "tag": "upper_legs_workout_calisthenics",
+            "patterns": [
+                "can you please advise an upper legs workout at home",
+                "please advise an upper legs workout at home",
+                "do you have any upper legs workout at home",
+                "advise me an upper legs workout at home",
+                "upper legs workout calisthenics",
+                "upperlegsworkoutcalisthenics",
+                "advise me a calisthenics upper legs workout",
+                "calisthenics upper legs workout",
+                "advise calisthenics upper legs workout",
+                "advise a calisthenics upper legs workout",
+                "advise an upper legs workout for home",
+                "can you please advise an upper leg workout at home",
+                "please advise an upper leg workout at home",
+                "do you have any upper leg workout at home",
+                "advise me an upper leg workout at home",
+                "upper leg workout calisthenics",
+                "upperlegworkoutcalisthenics",
+                "advise me a calisthenics upper leg workout",
+                "calisthenics upper leg workout",
+                "advise calisthenics upper leg workout",
+                "advise a calisthenics upper leg workout",
+                "advise an upper leg workout for home"
+            ],
+            "responses": [
+                "upper_legs_calisthenics"
+            ]
+        },
+        {
+            "tag": "waist_workout_gym",
+            "patterns": [
+                "can you please advise a waist workout for the gym",
+                "please advise a waist workout for the gym",
+                "do you have any waist workout for the gym",
+                "advise me a waist workout for the gym",
+                "waist workout gym",
+                "waistworkoutgym",
+                "advise waist workout for gym",
+                "advise a waist workout for the gym"
+            ],
+            "responses": [
+                "waist_gym"
+            ]
+        },
+        {
+            "tag": "waist_workout_calisthenics",
+            "patterns": [
+                "can you please advise a waist workout at home",
+                "please advise a waist workout at home",
+                "do you have any waist workout at home",
+                "advise me a waist workout at home",
+                "waist workout calisthenics",
+                "waistworkoutcalisthenics",
+                "advise me a calisthenics waist workout",
+                "calisthenics waist workout",
+                "advise calisthenics waist workout",
+                "advise a calisthenics waist workout",
+                "advise a waist workout for home"
+            ],
+            "responses": [
+                "waist_calisthenics"
+            ]
+        }
+    ]
+}
