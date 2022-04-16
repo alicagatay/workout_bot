@@ -14,9 +14,10 @@ nltk.download('omw-1.4')
 
 
 chatbotData = os.path.relpath('..//data')
-chatbotIntents = json.loads(open(chatbotData + '/intents.json').read())
+chatbotIntents = json.loads(
+    open(chatbotData + '/intents.json', encoding='UTF-8').read())
 exerciseData = json.loads(
-    open(chatbotData + '/list_of_all_exercises.json').read())
+    open(chatbotData + '/list_of_all_exercises.json', encoding='UTF-8').read())
 
 
 chatbotWords = []
