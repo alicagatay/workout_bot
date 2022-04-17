@@ -1,3 +1,7 @@
+"""
+This file contains the implementation of the server architecture.
+"""
+
 import json
 import os
 import random
@@ -8,40 +12,46 @@ import numpy as np
 import tensorflow as tf
 
 
+# Load the model that is trained on chatbot_model.py file
 models = os.path.relpath('..//models')
-
-
 chatbotModel = tf.keras.models.load_model(models + '/chatbot_model.h5')
 
 
+# Load both the intents.json and list_of_all_exercises.json files as dictionaries
 chatbotData = os.path.relpath('..//data')
-
-
 chatbotIntents = json.loads(
     open(chatbotData + '/intents.json', encoding='UTF-8').read())
-
-
 exerciseData = json.loads(
     open(chatbotData + '/list_of_all_exercises.json', encoding='UTF-8').read())
 
 
+# Create a lemmatiser
 chatbotLemmatizer = nltk.stem.WordNetLemmatizer()
 
-
+# Load the list of chatbot words from the pickle file
 chatbotWords = pickle.load(open(chatbotData + '/chatbotWords.pkl', 'rb'))
 
 
+# Load the list of chatbot classes from the pickle file
 chatbotClasses = pickle.load(open(chatbotData + '/chatbotClasses.pkl', 'rb'))
 
 
 def clean_up_sentence(sentence):
-    sentenceWords = nltk.word_tokenize(sentence)
-    for word in sentenceWords:
+    """
+    The function clean_up_sentence() is used to clean up the sentence
+    received from the user as an input message
+    """
+    sentence_words = nltk.word_tokenize(sentence)
+    for word in sentence_words:
         word = chatbotLemmatizer.lemmatize(word.lower())
-    return sentenceWords
+    return sentence_words
 
 
 def bag_of_words(sentence):
+    """
+    The function bag_of_words() is used to create a bag of words
+    from the sentence received from the user as an input message
+    """
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(chatbotWords)
     for w in sentence_words:
@@ -52,6 +62,10 @@ def bag_of_words(sentence):
 
 
 def predict_class(sentence):
+    """
+    The function predict_class() is used to predict which body 
+    part the user wants to train
+    """
     bow = bag_of_words(sentence)
     res = chatbotModel.predict(np.array([bow]))[0]
     error_threshold = 0.50
@@ -66,6 +80,10 @@ def predict_class(sentence):
 
 
 def get_response(intents_list, intents_json):
+    """
+    The function get_response() is used to get a response from the
+    backend architecture based on the intent that is predicted by the chatbot
+    """
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
@@ -153,6 +171,11 @@ for exercise in exerciseData:
 
 
 def get_workout(response):
+    """
+    The function get_workout() is used to get a random
+    workout from the list of exercises based on the body part
+    the response specifies
+    """
     answer_dict = {
         'back_gym': random.choice(back_exercises_gym),
         'back_calisthenics': random.choice(back_exercises_calisthenics),
@@ -179,6 +202,9 @@ def get_workout(response):
 
 
 def run_chatbot(message):
+    """
+    The function run_chatbot() is used to run the chatbot
+    """
     ints = predict_class(message)
     try:
         response = get_response(ints, chatbotIntents)
@@ -200,6 +226,10 @@ app = Flask(__name__)
 
 @ app.route('/', methods=['GET'])
 def run_bot():
+    """
+    The function run_bot() is used to run the flask server in
+    localhost with the port number 3000   
+    """
     message = request.args.get('msg')
     response = run_chatbot(message)
     return response
