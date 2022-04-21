@@ -183,19 +183,19 @@ def get_workout(response):
         'cardio_calisthenics': random.choice(cardio_exercises_calisthenics),
         'chest_gym': random.choice(chest_exercises_gym),
         'chest_calisthenics': random.choice(chest_exercises_calisthenics),
-        'lower_arm_gym': random.choice(lower_arm_exercises_gym),
-        'lower_arm_calisthenics': random.choice(lower_arm_exercises_calisthenics),
-        'lower_leg_gym': random.choice(lower_leg_exercises_gym),
-        'lower_leg_calisthenics': random.choice(lower_leg_exercises_calisthenics),
+        'lower_arms_gym': random.choice(lower_arm_exercises_gym),
+        'lower_arms_calisthenics': random.choice(lower_arm_exercises_calisthenics),
+        'lower_legs_gym': random.choice(lower_leg_exercises_gym),
+        'lower_legs_calisthenics': random.choice(lower_leg_exercises_calisthenics),
         'neck_calisthenics': random.choice(neck_exercises_calisthenics),
         'shoulder_gym': random.choice(shoulder_exercises_gym),
         'shoulder_calisthenics': random.choice(shoulder_exercises_calisthenics),
         'waist_gym': random.choice(waist_exercises_gym),
         'waist_calisthenics': random.choice(waist_exercises_calisthenics),
-        'upper_arm_gym': random.choice(upper_arm_exercises_gym),
-        'upper_arm_calisthenics': random.choice(upper_arm_exercises_calisthenics),
-        'upper_leg_gym': random.choice(upper_leg_exercises_gym),
-        'upper_leg_calisthenics': random.choice(upper_leg_exercises_calisthenics)
+        'upper_arms_gym': random.choice(upper_arm_exercises_gym),
+        'upper_arms_calisthenics': random.choice(upper_arm_exercises_calisthenics),
+        'upper_legs_gym': random.choice(upper_leg_exercises_gym),
+        'upper_legs_calisthenics': random.choice(upper_leg_exercises_calisthenics)
     }
 
     return answer_dict[response]
@@ -209,7 +209,7 @@ def run_chatbot(message):
     try:
         response = get_response(ints, chatbotIntents)
         response = get_workout(response)
-    except ValueError:
+    except:
         response = {
             "bodyPart": "N/A",
             "equipment": "N/A",
