@@ -223,8 +223,9 @@ class _MainScreenState extends State<MainScreen> {
             ///
             /// Creates a [Container] widget which contains a [Row] widget.
             child: Container(
-              padding: const EdgeInsets.only(left: 10, bottom: 10, top: 10),
-              height: 60,
+              padding: const EdgeInsets.only(
+                  left: 10, bottom: 15, top: 10, right: 10),
+              height: 75,
               width: double.infinity,
               color: Colors.white,
 
