@@ -176,7 +176,7 @@ def run_chatbot(message):
     try:
         response = get_response(ints, chatbotIntents)
         response = get_workout(response)
-    except:
+    except LookupError:
         response = {
             "bodyPart": "N/A",
             "equipment": "N/A",
