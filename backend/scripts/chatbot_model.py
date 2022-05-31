@@ -69,7 +69,7 @@ random.shuffle(chatbotData)
 
 
 training_data, testing_data = train_test_split(
-    chatbotData, test_size=0.1, random_state=25)
+    chatbotData, test_size=0.3, random_state=25)
 
 
 training_data = np.array(training_data)
@@ -92,12 +92,13 @@ chatbotModel.add(tf.keras.layers.Dense(len(train_y[0]), activation='softmax'))
 
 
 adam = tf.keras.optimizers.Adam(learning_rate=0.01)
+
 chatbotModel.compile(loss='categorical_crossentropy',
                      optimizer=adam, metrics=['accuracy'])
 
 
 model_train = chatbotModel.fit(np.array(train_x), np.array(
-    train_y), epochs=100, batch_size=len(train_x[0]), verbose=1)
+    train_y), epochs=200, batch_size=len(train_x[0]), verbose=1)
 
 
 model_test = chatbotModel.evaluate(np.array(test_x), np.array(
