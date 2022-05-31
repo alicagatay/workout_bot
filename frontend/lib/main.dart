@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:frontend/workout.dart';
+import 'package:frontend/workout_page.dart';
 import 'chat_message_model.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(
@@ -15,14 +13,13 @@ void main() {
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
+  static String message = '';
 
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  late Future<Workout> futureWorkout;
-
   TextEditingController messageController = TextEditingController();
 
   List messages = [
@@ -39,17 +36,6 @@ class _MainScreenState extends State<MainScreen> {
             'Available body parts are: back, cardio, chest, lower arm, lower leg, neck, shoulder, upper arm, upper leg and waist.',
         sentfromWho: 'receiver'),
   ];
-
-  Future<Workout> fetchWorkout() async {
-    final response = await http.get(Uri.parse(
-        'http://localhost:3000/?msg=${messageController.text}')); //the url is localhost for ios and 10.0.2.2 for android
-
-    if (response.statusCode == 200) {
-      return Workout.fromJson(jsonDecode(response.body));
-    } else {
-      throw Exception('Failed to load workout');
-    }
-  }
 
   final ScrollController _scrollController = ScrollController();
 
@@ -118,6 +104,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   FloatingActionButton(
                     onPressed: () {
+                      MainScreen.message = messageController.text;
                       setState(() {
                         messages.add(ChatMessage(
                           messageContent: messageController.text,
@@ -130,101 +117,19 @@ class _MainScreenState extends State<MainScreen> {
                         ));
                       });
                       setState(() {
-                        futureWorkout = fetchWorkout();
                         messageController.clear();
                         _scrollController
                             .jumpTo(_scrollController.position.maxScrollExtent);
                       });
 
-                      Future.delayed(
-                        const Duration(seconds: 3),
-                        (() {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Scaffold(
-                                backgroundColor: Colors.white,
-                                body: ListView(
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.all(20),
-                                      alignment: Alignment.center,
-                                      child: FutureBuilder<Workout>(
-                                        future: futureWorkout,
-                                        builder: (context, snapshot) {
-                                          return Text(
-                                            'Workout name: ' +
-                                                snapshot.data!.name,
-                                            style: const TextStyle(
-                                              fontSize: 30,
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.all(20),
-                                      alignment: Alignment.center,
-                                      child: FutureBuilder<Workout>(
-                                        future: futureWorkout,
-                                        builder: (context, snapshot) {
-                                          return Text(
-                                            'Equipment needed: ' +
-                                                snapshot.data!.equipment,
-                                            style: const TextStyle(
-                                              fontSize: 30,
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.all(20),
-                                      alignment: Alignment.center,
-                                      child: FutureBuilder<Workout>(
-                                        future: futureWorkout,
-                                        builder: (context, snapshot) {
-                                          return Text(
-                                            'Target body part: ' +
-                                                snapshot.data!.bodyPart,
-                                            style: const TextStyle(
-                                              fontSize: 30,
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.all(20),
-                                      alignment: Alignment.center,
-                                      child: FutureBuilder<Workout>(
-                                        future: futureWorkout,
-                                        builder: (context, snapshot) {
-                                          return Text(
-                                            'Target muscle: ' +
-                                                snapshot.data!.target,
-                                            style: const TextStyle(
-                                              fontSize: 30,
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    FutureBuilder<Workout>(
-                                      future: futureWorkout,
-                                      builder: (context, snapshot) {
-                                        return Image.network(
-                                          snapshot.data!.gifUrl,
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        }),
-                      );
+                      Future(() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => WorkoutPage(),
+                          ),
+                        );
+                      });
                     },
                     child: const Icon(
                       Icons.send,
