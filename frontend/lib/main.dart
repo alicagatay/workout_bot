@@ -27,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
 
   List messages = [
     ChatMessage(
-      messageContent: 'Hey there, ready for an amazing workout session?',
+      messageContent: 'Hey there, welcome to WorkoutBot!',
       sentfromWho: 'receiver',
     ),
     ChatMessage(
